@@ -5,6 +5,12 @@
   "main": "index.js",
   "author": "Hamo",
   "dependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/node": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
     "express": "^4.17.1"
+  },
+  "scripts": {
+    "start": "babel-node index.js"
   }
 }
