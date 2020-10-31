@@ -15,8 +15,8 @@ const CHANGE_PASSWORD = "/change-password";
 // Video
 
 const VIDEOS = "/videos";
-const UPLOAD = "/upload";
 const VIDEO_DETAIL = "/:id";
+const UPLOAD = "/upload";
 const EDIT_VIDEO = "/:id/edit";
 const DELETE_VIDEO = "/:id/delete";
 
