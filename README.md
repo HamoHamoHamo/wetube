@@ -14,3 +14,8 @@ Cloning Youtube with VanillaJS and NodeJS
 - [ ] Upload Videos
 - [ ] Video Details
 - [ ] Edit Video
+
+## Memo
+ - Run MongoDB : sudo mongod --dbpath ~/data/db
+
+
