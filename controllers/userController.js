@@ -72,8 +72,16 @@ export const getMe = (req, res) => {
     res.render("userDetail", { pageTitles: "User Detail", user: req.user });
 };
 
-export const userDetail = (req, res) => 
-    res.render("userDetail", { pageTitle: "User Detail" });
+export const userDetail = async (req, res) => {
+    const { params: { id } } = req;
+    try {
+        const user = await User.findById(id);
+        res.render("userDetail", { pageTitle: "User Detail", user });
+    } catch (error) {
+        re.redirect(routes.home);
+    }
+};
+    
 export const users = (req, res) => 
     res.render("users", { pageTitle: "Users" });
 export const editProfile = (req, res) => 

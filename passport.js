@@ -11,7 +11,7 @@ passport.use(
     {
         clientID: process.env.GH_ID,
         clientSecret: process.env.GH_SECRET,
-        callbackURL: `http://ba112cc9a6e9.jp.ngrok.io${routes.githubCallback}`
+        callbackURL: process.env.NGROK+routes.githubCallback
     },
         githubLoginCallback
     )
