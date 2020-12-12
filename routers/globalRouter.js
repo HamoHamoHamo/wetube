@@ -1,6 +1,15 @@
 import express from "express";
 import passport from "passport";
-import { getJoin, getLogin, logout, postJoin, postLogin, githubLogin, postGithubLogIn, getMe } from "../controllers/userController";
+import { getJoin,
+         getLogin,
+         logout,
+         postJoin,
+         postLogin,
+         githubLogin,
+         postGithubLogIn,
+         googleLogin,
+         postGoogleLogIn,
+         getMe } from "../controllers/userController";
 import { home, search } from "../controllers/videoController";
 import routes from "../routes";
 import { onlyPublic, onlyPrivate } from "../middlewares";
@@ -18,11 +27,17 @@ globalRouter.get(routes.search, search);
 globalRouter.get(routes.logout, onlyPrivate, logout);
 
 globalRouter.get(routes.gitHub, githubLogin);
-
 globalRouter.get(
     routes.githubCallback, 
     passport.authenticate('github', { failureRedirect: "/login" }),
     postGithubLogIn
+);
+
+globalRouter.get(routes.google, googleLogin);
+globalRouter.get(
+    routes.googleCallback,
+    passport.authenticate('google', { failureRedirect: "/login"}),
+    postGoogleLogIn
 );
 
 globalRouter.get(routes.me, getMe);

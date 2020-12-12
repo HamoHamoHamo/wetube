@@ -18,4 +18,4 @@ Cloning Youtube with VanillaJS and NodeJS
 ## Memo
  - Run MongoDB : sudo mongod --dbpath ~/data/db
  - node.js를 apache에 연결 : https://ghwlchlaks.github.io/nodejs-apache
-
+ - http://hamotest.kro.kr/
